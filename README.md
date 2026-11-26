@@ -2,7 +2,7 @@
 
 把 [DeepSeek Harness](https://github.com/deepseek-ai) 的左侧边栏从「所有工程的会话堆在一起」改成「**一次只看一个工程**」：顶上是一个工程切换器，下面只列当前工程的会话。
 
-- 仓库：<https://github.com/voidobserve/dsh-project-scope>
+- 仓库：<https://github.com/voidobserve/project-scope>
 - npm：尚未发布
 
 ![侧边栏：左边是打开状态的工程切换器，右边是单个工程的会话列表（示意图）](docs/demo.png)
@@ -51,7 +51,7 @@
 dsh plugin --profile desktop add C:\path\to\dsh-project-scope
 
 # 仓库发布之后也可以直接按仓库装
-dsh plugin --profile desktop add github:voidobserve/dsh-project-scope
+dsh plugin --profile desktop add github:voidobserve/project-scope
 ```
 
 `dsh plugin` 只是把参数转发给 profile 目录里的 pnpm，它会往 `dependencies` 写一条，但**不会**改 `dsh.profile.bundles`。要把插件挂上启动列表，还得在同一个 `package.json` 的 `dsh.profile.bundles` 数组里加一项 `"dsh-project-scope"`（用界面安装时会自动写这两处）。

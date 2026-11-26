@@ -5,11 +5,11 @@
   "author": "voidobserve",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/voidobserve/dsh-project-scope.git"
+    "url": "git+https://github.com/voidobserve/project-scope.git"
   },
-  "homepage": "https://github.com/voidobserve/dsh-project-scope#readme",
+  "homepage": "https://github.com/voidobserve/project-scope#readme",
   "bugs": {
-    "url": "https://github.com/voidobserve/dsh-project-scope/issues"
+    "url": "https://github.com/voidobserve/project-scope/issues"
   },
   "keywords": [
     "dsh",
