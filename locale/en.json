@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Project scope",
-    "description": "Turns the sidebar into a single-project view: a project switcher on top and only the current project's sessions below it.",
+    "description": "Turns the sidebar into a single-project view: a project switcher on top shows the current project and its session count (click to filter or favorite), and only that project's sessions are listed below, pinned first and the rest by recent activity. Switching projects opens that project's most recent session, and a session opened from outside the sidebar (Explorer right-click, fork) pulls the sidebar to its project. While it is enabled the built-in workspace tree, drag-to-reorder, session search and hover cards are replaced; disable the plugin to restore them. Session and workspace data are untouched.",
     "detail": "docs/DETAIL.md"
   },
   "switcher": {

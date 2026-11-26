@@ -2,7 +2,7 @@
 
 把 [DeepSeek Harness](https://github.com/deepseek-ai) 的左侧边栏从「所有工程的会话堆在一起」改成「**一次只看一个工程**」：顶上是一个工程切换器，下面只列当前工程的会话。
 
-- 仓库：<https://github.com/voidobserve/project-scope>
+- 仓库：<https://github.com/voidobserve/dsh-project-scope>
 - npm：尚未发布
 
 ![侧边栏：左边是打开状态的工程切换器，右边是单个工程的会话列表（示意图）](docs/demo.png)
@@ -20,6 +20,8 @@
 | 跟随 | 从侧边栏之外打开的会话（资源管理器右键、分叉、快捷键）会把侧边栏切到它所属的工程，列表不会停在用户已经离开的工程上 |
 
 工程顺序是「默认工作区 → 收藏（按收藏时间）→ 其余按最近活动」。当前停在哪个工程记在 `localStorage`，刷新页面还在；关掉正在看的会话也不会跳走。
+
+侧边栏不显示滚动条，超长标题按省略号截断；内容仍可用滚轮滚动。
 
 ## 工程按根目录归并
 
@@ -51,7 +53,7 @@
 dsh plugin --profile desktop add C:\path\to\dsh-project-scope
 
 # 仓库发布之后也可以直接按仓库装
-dsh plugin --profile desktop add github:voidobserve/project-scope
+dsh plugin --profile desktop add github:voidobserve/dsh-project-scope
 ```
 
 `dsh plugin` 只是把参数转发给 profile 目录里的 pnpm，它会往 `dependencies` 写一条，但**不会**改 `dsh.profile.bundles`。要把插件挂上启动列表，还得在同一个 `package.json` 的 `dsh.profile.bundles` 数组里加一项 `"dsh-project-scope"`（用界面安装时会自动写这两处）。
@@ -71,14 +73,16 @@ dsh plugin --profile desktop add github:voidobserve/project-scope
 - 本地状态：`dsh-project-scope:selected-workspace`、`dsh-project-scope:favorites`。
 
 ```
-index.js              宿主侧占位行
-client.js             侧边栏面板（React + 原生事件，无构建步骤）
-cordis.patch.yml      insert 一条 project-scope 行
-locale/{en,zh}.json   插件列表里的标题 / 描述 / 详情
-docs/DETAIL.md        功能与限制说明（插件详情页展示）
-docs/demo.png         README 里的示意图
-icon.svg              插件图标
-test/render-smoke.mjs 离线渲染 smoke
+index.js                宿主侧占位行
+client.js               侧边栏面板（React + 原生事件，无构建步骤）
+cordis.patch.yml        insert 一条 project-scope 行
+locale/{en,zh}.json     插件列表里的标题 / 描述 / 详情文档指向
+docs/DETAIL.md          插件详情页（一张示意图，英文 alt）
+docs/DETAIL.zh.md       同上的中文 alt
+docs/preview.svg        详情页那张示意图
+docs/demo.png           README 顶部的示意图
+icon.svg                插件图标
+test/render-smoke.mjs   离线渲染 smoke
 ```
 
 ## 开发

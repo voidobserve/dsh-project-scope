@@ -1,15 +1,15 @@
 {
   "name": "dsh-project-scope",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "把 DeepSeek Harness 的侧边栏改成单工程视图：顶部是工程切换器，下面只列当前工程的会话。",
   "author": "voidobserve",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/voidobserve/project-scope.git"
+    "url": "git+https://github.com/voidobserve/dsh-project-scope.git"
   },
-  "homepage": "https://github.com/voidobserve/project-scope#readme",
+  "homepage": "https://github.com/voidobserve/dsh-project-scope#readme",
   "bugs": {
-    "url": "https://github.com/voidobserve/project-scope/issues"
+    "url": "https://github.com/voidobserve/dsh-project-scope/issues"
   },
   "keywords": [
     "dsh",
