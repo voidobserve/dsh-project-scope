@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "单工程视图",
+    "description": "把侧边栏变成单工程视图：顶部是工程切换器，下面只显示当前工程的会话。",
+    "detail": "docs/DETAIL.md"
+  },
+  "switcher": {
+    "label": "工程",
+    "all": "全部工程",
+    "empty": "还没有任何工程产生过会话。",
+    "count": "{n} 个会话",
+    "newSession": "新建会话"
+  },
+  "session": {
+    "untitled": "未命名",
+    "pin": "固定",
+    "unpin": "取消固定",
+    "rename": "重命名",
+    "renameTitle": "重命名会话",
+    "renamePlaceholder": "会话标题",
+    "confirm": "保存",
+    "cancel": "取消",
+    "empty": "这个工程还没有会话。"
+  }
+}

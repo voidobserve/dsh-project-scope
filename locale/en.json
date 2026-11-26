@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Project scope",
+    "description": "Turns the sidebar into a single-project view: a project switcher on top and only the current project's sessions below it.",
+    "detail": "docs/DETAIL.md"
+  },
+  "switcher": {
+    "label": "Project",
+    "all": "All projects",
+    "empty": "No project has sessions yet.",
+    "count": "{n} sessions",
+    "newSession": "New session"
+  },
+  "session": {
+    "untitled": "Untitled",
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "rename": "Rename",
+    "renameTitle": "Rename session",
+    "renamePlaceholder": "Session title",
+    "confirm": "Save",
+    "cancel": "Cancel",
+    "empty": "This project has no sessions yet."
+  }
+}
